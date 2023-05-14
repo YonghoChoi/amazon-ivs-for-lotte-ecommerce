@@ -556,7 +556,7 @@ const Chat = () => {
       username: '',
       userId: '',
       avatar: '',
-      message: `Connected to the chat room.`,
+      message: `채팅방에 입장했습니다.`,
     };
     setMessages((prevState) => {
       return [...prevState, status];
@@ -571,7 +571,7 @@ const Chat = () => {
   return (
     <>
       <header>
-        <h1>Amazon IVS Chat Web Demo</h1>
+        <h1>롯데e커머스 테크 컨퍼런스</h1>
       </header>
       <div className='main full-width full-height chat-container'>
         <div className='content-wrapper mg-2'>
@@ -593,8 +593,8 @@ const Chat = () => {
                   type='text'
                   placeholder={
                     isChatConnected()
-                      ? 'Say something'
-                      : 'Waiting to connect...'
+                      ? '입력해주세요.'
+                      : '연결 중 입니다...'
                   }
                   value={message}
                   maxLength={500}
@@ -617,7 +617,7 @@ const Chat = () => {
                       onClick={handleOnClick}
                       className='btn btn--primary full-width rounded'
                     >
-                      Join the chat room
+                      채팅방 입장
                     </button>
                   </fieldset>
                 )}

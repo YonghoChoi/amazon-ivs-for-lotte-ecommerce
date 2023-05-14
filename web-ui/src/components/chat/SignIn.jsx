@@ -19,11 +19,11 @@ const SignIn = ({ handleSignIn }) => {
   return (
     <div className="modal pos-absolute top-0 bottom-0">
       <div className="modal__el">
-        <h1 className="mg-b-2">Join the chat room</h1>
+        <h1 className="mg-b-2">채팅방 입장</h1>
         <form onSubmit={(e) => {e.preventDefault()}}>
           <fieldset>
             <label htmlFor="name" className="mg-b-05">
-              Username
+              이름
             </label>
             <input
               name="name"
@@ -31,7 +31,7 @@ const SignIn = ({ handleSignIn }) => {
               ref={inputRef}
               type="text"
               className="radius"
-              placeholder="Type here..."
+              placeholder="입력해주세요..."
               autoComplete="off"
               value={username}
               onChange={(e) => {
@@ -40,7 +40,7 @@ const SignIn = ({ handleSignIn }) => {
               }}
             />
             <hr />
-            <div className="mg-b-05 label">Select Avatar</div>
+            <div className="mg-b-05 label">아바타 선택</div>
             <div className="item-select-container pd-1 mg-b-1">
               <div className="avatars pos-relative item-select-grid">
                 <Avatars
@@ -63,7 +63,7 @@ const SignIn = ({ handleSignIn }) => {
                   setModerator(e.target.checked);
                 }}
               />
-              <label htmlFor="moderator">Join as moderator</label>
+              <label htmlFor="moderator">모더레이터로 입장</label>
             </div>
             <hr />
             <button
@@ -73,7 +73,7 @@ const SignIn = ({ handleSignIn }) => {
               className="btn btn--primary rounded mg-t-1"
               disabled={!username}
             >
-              Start chatting
+              채팅 시작하기
             </button>
           </fieldset>
         </form>
